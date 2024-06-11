@@ -1,0 +1,16 @@
+
+.Dealer-cards img{
+display: flex;
+height: fit-content;
+width:140px;
+padding: 5px;
+gap: 8px;
+}
+
+.Your-cards img{
+display: flex;
+height: fit-content;
+width: 140px;
+padding: 5px;
+gap: 8px;
+}
