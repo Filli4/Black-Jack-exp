@@ -14,3 +14,21 @@ width: 140px;
 padding: 5px;
 gap: 8px;
 }
+
+.animate-pop {
+    animation: pop-out 0.3s ease forwards;
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+@keyframes pop-out {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
