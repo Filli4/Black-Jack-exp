@@ -4,7 +4,7 @@ import Win from "./components/win";
 import Draw from "./components/draw";
 import Lose from "./components/lose";
 import React, { useState, useEffect } from 'react';
-
+import Image from 'next/image';
 
 export default function Home() {
   const [deck, setDeck] = useState([]);
@@ -175,11 +175,11 @@ export default function Home() {
 
         <div className="Dealer-cards flex gap-4">
           {dealerCards.map((card, index) => (
-            <img 
+            <Image 
               key={index} 
-              src={`./cards/${index === 0 && !dealerRevealed ? 'BACK' : card}.png`} 
+              src={`/cards/${index === 0 && !dealerRevealed ? 'BACK' : card}.png`} 
               alt={card} 
-              className='w-36'
+              width={150} height={40}
             />
           ))}
         </div>
@@ -208,7 +208,7 @@ export default function Home() {
 
         <div className="Your-cards flex gap-4">
           {playerCards.map((card, index) => (
-            <img key={index} src={`./cards/${card}.png`} alt={card} className='w-36' />
+            <Image key={index} src={`/cards/${card}.png`} alt={card} width={150} height={40} />
           ))}
         </div>
       </div>
